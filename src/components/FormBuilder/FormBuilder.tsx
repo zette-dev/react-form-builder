@@ -66,25 +66,8 @@ const FormBuilder: React.FC = () => {
                 <div className="error-message">{submitError}</div>
             )}
 
-            <form onSubmit={handleSubmit}>
-                {schema.fields.map((field) => (
-                    <FormField
-                        key={field.id}
-                        field={field}
-                        value={formData[field.id]}
-                        onChange={handleFieldChange}
-                        error={errors[field.id]}
-                    />
-                ))}
+            {/* TODO implement form with fields from `schema.fields` and form submission button */}
 
-                <button
-                    type="submit"
-                    className="form-submit"
-                    disabled={isSubmitting}
-                >
-                    {isSubmitting ? 'Submitting...' : 'Submit Form'}
-                </button>
-            </form>
         </div>
     );
 };
